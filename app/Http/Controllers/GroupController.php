@@ -92,7 +92,7 @@ class GroupController extends Controller
             $entry = [
                 'userName' => $member->user->name,
                 'email' => $member->user->email,
-                'amount_saved' => 2000
+                'amount_saved' => $member->amount_saved,
             ];
 
             $data[] = $entry;
