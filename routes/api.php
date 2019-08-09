@@ -15,7 +15,6 @@ use Illuminate\Http\Request;
 
 // JWT authentication
 Route::group([
-    'middleware' => 'api',
     'prefix' => 'auth'
 ], function () {
     Route::post('register', 'AuthController@register');
@@ -24,3 +23,10 @@ Route::group([
     Route::post('refresh', 'AuthController@refresh');
     Route::post('me', 'AuthController@me');
 });
+
+Route::post('groups', 'GroupController@store');
+Route::get('groups/public', 'GroupController@index');
+Route::get('groups/{id}/members', 'GroupController@show');
+
+Route::post('groups/invite', 'InviteController@process');
+Route::get('accept/{token}', 'InviteController@accept')->name('accept');

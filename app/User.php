@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Group;
+use App\Member;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -54,4 +56,19 @@ class User extends Authenticatable implements JWTSubject
     }
 
 
+    /**
+     * Get the group record associated with the user.
+     */
+    public function group()
+    {
+        return $this->hasMany(Group::class);
+    }
+
+    /**
+     * Get the members record associated with the user.
+     */
+    public function member()
+    {
+        return $this->hasMany(Member::class);
+    }
 }
