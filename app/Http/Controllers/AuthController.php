@@ -33,7 +33,8 @@ class AuthController extends Controller
         
         $rules = [
             'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users'
+            'email' => 'required|email|max:255|unique:users',
+            'password' => 'required|min:6'
         ];
         $validator = Validator::make($credentials, $rules);
         if($validator->fails()) {
@@ -46,7 +47,7 @@ class AuthController extends Controller
         $user = User::create(['name' => $name, 'email' => $email, 'password' => Hash::make($password)]);
         $verification_code = str_random(30); //Generate verification code
         
-        return response()->json(['success'=> true, 'message'=> 'Thanks for signing up!']);
+        return response()->json(['success'=> true, 'message'=> 'Thanks for signing up!'], 201);
     }
 
 
