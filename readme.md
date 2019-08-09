@@ -66,9 +66,9 @@ POST   | User logout | `/api/auth/logout`
 GET    | Get current logged in user | `/api/me`
 POST   | Create group | `/api/groups`
 GET    | List public group | `api/groups/public`
-POST   | List group memebers | `groups/{id}/members`
-POST   | Send group invite | `groups/invite`
-GET    | Accept group invite | `accept/{token}`
+POST   | List group memebers | `api/groups/{id}/members`
+POST   | Send group invite | `api/groups/invite`
+GET    | Accept group invite | `api/accept/{token}`
 
 ## Implemented Features
 - Users can register on the application
