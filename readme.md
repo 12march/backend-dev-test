@@ -75,6 +75,7 @@ GET    | Accept group invite | `accept/{token}`
 - Laravel - A free, open-source PHP web framework, created by Taylor Otwell
 - Mysql - Relational Database System used in project.
 - JWT - used to authorize and authenticate API routes.
+- Mailgun - Email APIs that enable you to send, receive, and track emails.
 
 
 ## Acknowledgements
