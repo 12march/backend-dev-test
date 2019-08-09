@@ -8,7 +8,7 @@
 ### Step 1.
 - Begin by cloning this repository to your machine 
 ```
-git clone https://github.com/cupidcoder/questioner.git
+git clone https://github.com/12march/backend-dev-test.git
 ```
 
 - Install dependencies
@@ -27,14 +27,22 @@ php artisan key:generate
 ```
 
 ### Step 2
-Next, create a new database and reference its name and username/password in the projects .env file. Below the database name is "transport"
+- Next, create a new database and reference its name and username/password in the projects .env file. Below the database name is "expanse"
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=transport
+DB_DATABASE=expanse
 DB_USERNAME=root
 DB_PASSWORD=
+```
+
+- Go to your mailgun account and get your mailgun domain and secret key. choose an email and senders name
+```
+MAILGUN_DOMAIN=****
+MAILGUN_SECRET=****
+MAIL_FROM_ADDRESS=***@***.com
+MAIL_FROM_NAME=*****
 ```
 
 ### Step 3
